@@ -134,9 +134,6 @@ public class AddNoteActivity extends AppCompatActivity {
 
         imagePath = saveToInternalStorage(bitmap, false);
         thumbnailPath = saveToInternalStorage(thumbnailBitmap, true);
-
-        //Todo: use this method to retrieve image from saved location
-        //loadImageFromStorage(imagePath);
         if(captionText.getText().toString().isEmpty()) {
             Toast.makeText(getApplicationContext(), "Caption can not be empty.", Toast.LENGTH_LONG).show();
         }

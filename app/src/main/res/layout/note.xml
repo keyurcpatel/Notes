@@ -21,14 +21,4 @@
         android:id="@+id/note_caption"
         android:layout_marginTop="10dp" />
     </LinearLayout>
-
-    <ImageButton
-        android:id="@+id/btnClose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@android:color/black"
-        android:src="@android:drawable/ic_menu_close_clear_cancel" />
-
 </RelativeLayout>

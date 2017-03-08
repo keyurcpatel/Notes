@@ -126,44 +126,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void loadImageFromStorage(String path) {
 
-        try {
-            File f=new File(path, "");
-            thumbnailBitmap = BitmapFactory.decodeStream(new FileInputStream(f));
-            String deleteThis = "" ;
-            //Todo: Change imageview in onItemClickListener of listview to load the photo
-//            ImageView img=(ImageView)findViewById(R.id.note_image);
-//            img.setImageBitmap(b);
-        }
-        catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }
-
-    }
-    private void showDialog() {
-        // custom dialog
-        dialog = new Dialog(this);
-        dialog.setContentView(R.layout.note);
-
-        // set the custom dialog components - text, image and button
-        ImageButton close = (ImageButton) dialog.findViewById(R.id.btnClose);
-        note_image.setImageBitmap(thumbnailBitmap);
-
-        // Close Button
-        close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-                //TODO Close button action
-            }
-        });
-
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-        dialog.show();
-    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

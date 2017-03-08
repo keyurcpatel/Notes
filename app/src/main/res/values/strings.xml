@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">Notes</string>
+
+    <string name="caption">CAPTION</string>
+    <string name="enter_caption_hint">Enter Caption</string>
+
+    <!-- Button Strings -->
+    <string name="button_capture_image">CAPTURE IMAGE</string>
+    <string name="button_done">DONE</string>
+
+    <!-- Menu Item Strings -->
     <string name="uninstall">Uninstall</string>
     <string name="deleteAll">Delete All</string>
 </resources>

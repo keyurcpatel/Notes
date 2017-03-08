@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:hint="Enter Caption"
+        android:hint="@string/enter_caption_hint"
         android:ems="10"
         android:id="@+id/captionText"
         android:inputType="text|textAutoComplete|textMultiLine|textLongMessage"
@@ -41,13 +41,12 @@
         android:layout_below="@id/imageView">
 
         <Button
-            android:text="Capture image"
+            android:text="@string/button_capture_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:layout_above="@+id/captionText"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
@@ -56,13 +55,12 @@
             android:onClick="dispatchTakePictureIntent" />
 
         <Button
-            android:text="Done"
+            android:text="@string/button_done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:layout_above="@+id/captionText"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"

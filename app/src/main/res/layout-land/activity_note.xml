@@ -7,54 +7,41 @@
     android:layout_height="match_parent"
     tools:context="edu.csulb.android.notes.NoteActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/container">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:maxHeight="400dp"
-                android:maxWidth="350dp"
+                android:id="@+id/note_review_image"
                 android:scaleType="fitCenter"
+                android:background="@color/black"
                 android:adjustViewBounds="true"
                 app:srcCompat="@mipmap/ic_launcher"
-                android:id="@+id/note_review_image"
-                android:background="@color/black"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/note_review_image">
-    <TextView
-        android:text="CAPTION"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@android:color/white"
-        android:paddingStart="16dp"
-        android:id="@+id/note_caption_title" />
-    <TextView
-        android:text="TextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/darker_gray"
-        android:textColor="@android:color/black"
-        android:padding="16dp"
-        android:layout_below="@id/note_caption_title"
-        android:id="@+id/note_review_caption" />
-</RelativeLayout>
+                android:layout_alignParentStart="true" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:textColor="@android:color/white"
+                        android:paddingStart="16dp"
+                        android:id="@+id/note_caption_title" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:padding="16dp"
+                        android:layout_below="@id/note_caption_title"
+                        android:id="@+id/note_review_caption" />
+                </RelativeLayout>
         </RelativeLayout>
-    </ScrollView>
-
 </RelativeLayout>

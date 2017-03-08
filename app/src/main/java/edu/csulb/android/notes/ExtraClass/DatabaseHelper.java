@@ -76,17 +76,11 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return result;
     }
 
-    public Cursor getLastRow(){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor result = db.rawQuery("SELECT COLUMN_CAPTION, COLUMN_THUMBNAIL_PATH, COLUMN_IMAGE_PATH FROM "+ TABLE_NOTES + " WHERE ID IN (SELECT MAX(COLUMN_ID) FROM "+ TABLE_NOTES +")",null);
-        return result;
-    }
     public void deleteAll() {
         SQLiteDatabase db = this.getWritableDatabase();
         String whereClause = null;
         String[] whereArgs = {};
         db.delete(TABLE_NOTES, whereClause, whereArgs);
-//      db.execSQL("delete from "+ TABLE_NOTES);
     }
 
     public Cursor getImagePath(String note_ID) {
@@ -95,28 +89,5 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return result;
     }
 
-    public boolean isTableExists(String tableName, boolean openDb) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        if(openDb) {
-            if(db == null || !db.isOpen()) {
-                db = getReadableDatabase();
-            }
-
-            if(!db.isReadOnly()) {
-                db.close();
-                db = getReadableDatabase();
-            }
-        }
-
-        Cursor cursor = db.rawQuery("select DISTINCT tbl_name from sqlite_master where tbl_name = '"+ TABLE_NOTES +"'", null);
-        if(cursor!=null) {
-            if(cursor.getCount()>0) {
-                cursor.close();
-                return true;
-            }
-            cursor.close();
-        }
-        return false;
-    }
 
 }
