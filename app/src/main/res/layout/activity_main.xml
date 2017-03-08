@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.csulb.android.notes.MainActivity">
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_menu_add"
+        android:id="@+id/addNote"
+        android:onClick="addNote"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:backgroundTint="?attr/actionModeSplitBackground"
+        app:rippleColor="@color/white" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"></ListView>
+</RelativeLayout>
